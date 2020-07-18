@@ -37,3 +37,13 @@ code {
   cursor: pointer;
   margin-left: 0.5rem;
 }
+.todo-app-container .todo{
+  display: flex;
+  justify-content: space-evenly;
+}
+.todo-app-container .todo-item{
+    text-decoration: none;
+    padding: 1rem;
+    cursor: pointer;
+
+}
