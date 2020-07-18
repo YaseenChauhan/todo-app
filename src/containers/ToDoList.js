@@ -7,7 +7,7 @@ const getTodos = (todos) => {
 }
 
 const mapStateToProps = state => ({
-  todos: getTodos(state.todos, state.visibilityFilter)
+  todos: getTodos(state.todos)
 })
 
 const mapDispatchToProps = dispatch => ({
