@@ -38,6 +38,11 @@ code {
   margin-left: 0.5rem;
 }
 
+.add-todo-container .add-todo:disabled{
+  background: lightsteelblue;
+  cursor: auto;
+}
+
 .todo-app-container .todo{
   display: flex;
   justify-content: space-between;
