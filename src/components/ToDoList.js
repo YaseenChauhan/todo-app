@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Todo from './ToDo'
+import Footer from '../components/Footer'
 
 const TodoList = ({ todos, toggleTodo }) => (
   <div>
@@ -12,6 +13,7 @@ const TodoList = ({ todos, toggleTodo }) => (
         onChange={() => toggleTodo(todo.id)}
       />
     )}
+    <Footer addedTodos={todos.length} />
   </div>
 )
 
