@@ -1,36 +1,47 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DeleteTodo from '../containers/RemoveTodo'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-// import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import EditTodo from '../containers/EditTodo'
 
-const Todo = ({ onChange, completed, text, id }) => (
-  <div className="todo">
-	<input type="checkbox" checked={completed} onChange={onChange} />
-    <div
-		style={{
-			textDecoration: completed ? 'line-through' : 'none'
-		}}
-		className='todo-item'
-    >
-      	{text}
-    </div>
-    <div>
-		{/* <FontAwesomeIcon icon={faPencilAlt} />
-		<FontAwesomeIcon icon={faTrashAlt} onClick={
-			e => {
-				e.preventDefault()
-				dispatch(deleteTodo(id))
-			}
-		} /> */}
-		<DeleteTodo id={id} />
-    </div>
-  </div>
-)
+class Todo extends React.Component{
+	constructor(props){
+		super(props);
+		this.state={
+			editing: false
+		}
+	}
+
+	render(){
+		return(
+			<div >
+				{!this.state.editing ? 
+					<div className="todo">
+						<input type="checkbox" checked={this.props.completed} onChange={this.props.onChange} />
+						<div
+							onClick={ ()=>{this.setState({editing: true})} }
+							style={{
+								textDecoration: this.props.completed ? 'line-through' : 'none'
+							}}
+							className='todo-item'
+						>
+							{this.props.text}
+						</div>
+						<div>
+							<DeleteTodo id={this.props.id} />
+						</div>
+					</div>
+					: <EditTodo
+						id={this.props.id}
+						text={this.props.text}
+						doneEditing={()=>this.setState({editing: false})}
+					/>
+				}
+			</div>
+		)
+	}
+}
 
 Todo.propTypes = {
-	onClick: PropTypes.func.isRequired,
 	completed: PropTypes.bool.isRequired,
 	text: PropTypes.string.isRequired
 }

@@ -15,3 +15,10 @@ export const toggleTodo = id => ({
     type: 'TOGGLE_TODO',
     id
 })
+export const editTodo = (id, text) => ({
+    type: 'EDIT_TODO',
+    payload : {
+        id,
+        text
+    }
+})
