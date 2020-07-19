@@ -37,6 +37,7 @@ code {
   cursor: pointer;
   margin-left: 0.5rem;
 }
+
 .todo-app-container .todo{
   display: flex;
   justify-content: space-between;
@@ -50,12 +51,14 @@ code {
   color: white;
 
 }
+
 .todo-app-container .todo-item{
     text-decoration: none;
     cursor: pointer;
     font-size: 25px;
     
 }
+
 .todo-app-container .edit-todo{
   font-size: 25px;
   border: none;
@@ -64,4 +67,8 @@ code {
 
 .todo-app-container .edit-todo:focus{
   outline: none;
+}
+
+.todo-app-container .todo .delete-todo{
+  cursor: pointer
 }

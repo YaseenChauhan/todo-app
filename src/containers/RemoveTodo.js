@@ -6,7 +6,7 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 const DeleteTodo = ({ dispatch, id }) => {
     return (
-        <FontAwesomeIcon icon={faTrashAlt} onClick={
+        <FontAwesomeIcon className="delete-todo" icon={faTrashAlt} onClick={
 			e => {
 				e.preventDefault()
 				dispatch(deleteTodo(id))

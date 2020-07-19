@@ -9,7 +9,7 @@ const EditTodo = ({dispatch, id, text, doneEditing}) => {
             className="edit-todo todo" 
             onKeyDown={ (e) =>{ 
                 dispatch(editTodo(id, input.value))
-                if(e.keyCode == 13)
+                if(e.keyCode === 13)
                     doneEditing();
             } }
             defaultValue={text} 
