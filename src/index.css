@@ -39,10 +39,29 @@ code {
 }
 .todo-app-container .todo{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;    
+  margin-top: 1rem;
+  background: linear-gradient(145deg, #f05a28, #ec008c);
+  color: white;
+
 }
 .todo-app-container .todo-item{
     text-decoration: none;
     cursor: pointer;
+    font-size: 25px;
+    
+}
+.todo-app-container .edit-todo{
+  font-size: 25px;
+  border: none;
+  border-bottom: 2px solid cornflowerblue;
+}
 
+.todo-app-container .edit-todo:focus{
+  outline: none;
 }

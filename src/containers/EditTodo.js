@@ -5,7 +5,8 @@ import { editTodo } from '../actions'
 const EditTodo = ({dispatch, id, text, doneEditing}) => {
     let input 
     return(
-        <input className="edit" 
+        <input 
+            className="edit-todo todo" 
             onKeyDown={ (e) =>{ 
                 dispatch(editTodo(id, input.value))
                 if(e.keyCode == 13)
