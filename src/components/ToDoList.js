@@ -4,12 +4,12 @@ import Todo from './ToDo'
 
 const TodoList = ({ todos, toggleTodo }) => (
   <div>
+    {console.log(todos)}
     {todos.map(todo =>
       <Todo
         key={todo.id}
         {...todo}
-        onClick={() => toggleTodo(todo.id)}
-        id={todo.id}
+        onChange={() => toggleTodo(todo.id)}
       />
     )}
   </div>

@@ -5,13 +5,14 @@ import DeleteTodo from '../containers/RemoveTodo'
 // import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 // import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
-const Todo = ({ onClick, completed, text, id }) => (
+const Todo = ({ onChange, completed, text, id }) => (
   <div className="todo">
+	<input type="checkbox" checked={completed} onChange={onChange} />
     <div
-		onClick={onClick}
-		style={{
-			textDecoration: completed ? 'line-through' : 'none'
-		}}
+		// onClick={onClick}
+		// style={{
+		// 	textDecoration: completed ? 'line-through' : 'none'
+		// }}
 		className='todo-item'
     >
       	{text}
