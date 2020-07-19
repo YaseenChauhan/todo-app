@@ -9,10 +9,9 @@ const Todo = ({ onChange, completed, text, id }) => (
   <div className="todo">
 	<input type="checkbox" checked={completed} onChange={onChange} />
     <div
-		// onClick={onClick}
-		// style={{
-		// 	textDecoration: completed ? 'line-through' : 'none'
-		// }}
+		style={{
+			textDecoration: completed ? 'line-through' : 'none'
+		}}
 		className='todo-item'
     >
       	{text}

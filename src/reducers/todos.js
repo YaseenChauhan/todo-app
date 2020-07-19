@@ -14,7 +14,7 @@ const todos = (state = [], action) => {
             return state.filter(todo => todo.id !== action.id);  
 
         case 'TOGGLE_TODO':
-        return state.map(todo =>
+            return state.map(todo =>
             (todo.id === action.id)
             ? {...todo, completed: !todo.completed}
             : todo

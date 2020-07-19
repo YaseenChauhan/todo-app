@@ -39,11 +39,10 @@ code {
 }
 .todo-app-container .todo{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .todo-app-container .todo-item{
     text-decoration: none;
-    padding: 1rem;
     cursor: pointer;
 
 }
