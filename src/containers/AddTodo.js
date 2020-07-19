@@ -17,6 +17,7 @@ const AddTodo = ({ dispatch }) => {
             <form onSubmit={e => {
                 e.preventDefault();
                 dispatch(addTodo(input))
+                localStorage.setItem('todo', input) //setting in local storage
                 setInput('')
             }}>
             <input 
